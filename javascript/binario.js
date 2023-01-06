@@ -16,7 +16,7 @@ function bin_dec(){
     for(let i = 0; i < inteira.length; i++){
         
         if(inteira[i] != '0' && inteira[i] != '1'){
-            return "Número invalido!"
+            return "-"
         }
 
         if(inteira[i] == '1'){
@@ -29,7 +29,7 @@ function bin_dec(){
     for(let i = 0; i < decimal.length; i++){
         
         if(decimal[i] != '0' && decimal[i] != '1'){
-            return "Número invalido!"
+            return "-"
         }
 
         if(decimal[i] == '1'){
@@ -50,7 +50,7 @@ function bin_oct(){
     aux = dec_oct(aux);
 
     if(isNaN(aux)){
-        return "Número invalido!"
+        return "-"
     }else{
         return aux;
     }
@@ -66,7 +66,7 @@ function bin_hex(){
     aux = dec_hex(aux);
 
     if(aux === ".NaNNaNNaNNaNNaNNaN"){
-        return "Número invalido!"
+        return "-"
     }
     return aux;
 }

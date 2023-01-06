@@ -42,7 +42,7 @@ function dec_bin(decimal){
 
     //retorna o valor convertido
     if(bin === ".NaNNaNNaNNaNNaNNaN"){
-        return "Numero invalido!"
+        return "-"
     }else{
         return bin
     }
@@ -91,7 +91,7 @@ function dec_oct(decimal){
 
     //retorna o valor convertido
     if(oct === ".NaNNaNNaNNaNNaNNaN"){
-        return "Numero invalido!"
+        return "-"
     }else{
         return oct
     }
@@ -197,7 +197,7 @@ function dec_hex(decimal){
 
     //retorna o valor convertido
     if(hex === ".NaNNaNNaNNaNNaNNaN"){
-        return "Numero invalido!"
+        return "-"
     }else{
         return hex
     }

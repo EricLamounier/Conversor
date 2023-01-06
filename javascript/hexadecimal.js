@@ -86,7 +86,7 @@ function hex_dec(){
 
     
     if(dec === ".NaNNaNNaNNaNNaNNaN" || isNaN(dec)){
-        return "Numero invalido!"
+        return "-"
     }else{
         return dec
     }
@@ -101,7 +101,7 @@ function hex_bin(){
     aux = dec_bin(aux);
 
     if(isNaN(aux) || aux === ".NaNNaNNaNNaNNaNNaN"){
-        return "Número invalido!"
+        return "-"
     }else{
         return aux;
     }
@@ -116,7 +116,7 @@ function hex_oct(){
     aux = dec_oct(aux);
 
     if(isNaN(aux) || aux === ".NaNNaNNaNNaNNaNNaN"){
-        return "Número invalido!"
+        return "-"
     }else{
         return aux;
     }

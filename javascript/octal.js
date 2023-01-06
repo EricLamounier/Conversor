@@ -15,7 +15,7 @@ function oct_dec(){
     for(let i = 0; i < inteira.length; i++){
         
         if(inteira[i] > 7){
-            return "Número invalido!"
+            return "-"
         }
 
         dec += (parseInt(inteira[i]) * Math.pow(8, tam));
@@ -26,7 +26,7 @@ function oct_dec(){
     for(let i = 0; i < decimal.length; i++){
         
         if(decimal[i] > 7){
-            return "Número invalido!"
+            return "-"
         }
 
         dec += (parseInt(decimal[i]) * Math.pow(8, -1*(i+1)))
@@ -34,7 +34,7 @@ function oct_dec(){
     }
 
     if(dec === ".NaNNaNNaNNaNNaNNaN" || isNaN(dec)){
-        return "Número invalido!"
+        return "-"
     }else{
         return dec
     }
@@ -51,7 +51,7 @@ function oct_bin(){
     aux = dec_bin(aux);
 
     if(isNaN(aux)){
-        return "Número invalido!"
+        return "-"
     }else{
         return aux;
     }
@@ -67,7 +67,7 @@ function oct_hex(){
     aux = dec_hex(aux);
 
     if(aux === ".NaNNaNNaNNaNNaNNaN"){
-        return "Número invalido!"
+        return "-"
     }
     return aux;
 }
