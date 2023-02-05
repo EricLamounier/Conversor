@@ -1,165 +1,105 @@
-
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #373737;
+    background-color: #1f2631;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-header {
-    background-color: rgb(29, 29, 29);
     color: white;
-    text-align: center;
-    width: 100vw;
-    height: 30px;
-    font-family: sans-serif;
-}
-
-header h1 {
-    font-size: 1em;
-    z-index: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-header .lateral {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-header .lateral:active {
-    background-color: black;
-}
-
-#menu {
-    position: absolute;
-    top: 30px;
-    text-align: justify;
-    background-color: #00000066;
-    width: 150px;
-    height: calc(100vh - 30px);
-    transform: translateX(-150px);
-    transition: 0.4s ease-in-out;
-    z-index: 1;
-}
-
-#menu li {
-    padding: 15px;
-    list-style: none;
-}
-
-#menu li:hover {
-    background-color: black;
-    cursor: pointer;
-}
-
-#lateral:checked ~ #menu{
-    transform: translateX(0px);
-}
-
-a {
-    color: white;
-    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 main {
     display: flex;
+    flex-direction: column;
     flex: 1;
+    align-items: center;
+}
+
+main #container {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#container header {
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #31a871;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+
+#container header div:nth-child(1) {
+    width: 50%;
+}
+
+#container header div:nth-child(2) svg {
+    height: 60px;
+    width: 60px;
+    fill: rgb(14, 27, 16);
+}
+
+#container header div:nth-child(2) {
+    width: 50%;
+    text-align: right;
+}
+
+#container #conversor {
+    background-color: #313a47;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgb(15, 15, 15);
+}
+
+#container .boxInput {
     width: 80%;
-    max-width: 450px;
-}
-
-main .container {
-    background-color: rgb(39, 39, 39);
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
-    max-height: 400px;
-    min-height: 360px;
-    box-shadow: 1px 1px 5px rgb(35, 35, 35);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-radius: 30% 70% 70% 30% / 30% 40% 60% 70% ;
-    margin: 30px;
-}
-
-main .container .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    right: 15px;
 }
 
-main .container .formulario div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    color: white;
-    width: 100%;
-    margin: 7px;
+.boxInput label {
+    margin-bottom: 5px;
 }
 
-main .container .formulario div input {
-    width: 65%;
-    max-width: 500px;
-    min-width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    border: 0;
+.boxInput p {
+    position: absolute;
+    bottom: -13px;
+    right: 0;
+    font-size: 10px;
+    color: #31a871;
+}
+
+#container .boxInput input {
     font-size: 16px;
+    height: 35px;
+    border-radius: 5px;
+    outline: 0;
+    padding-left: 5px;
+    border-color: transparent;
 }
 
-main .container .formulario div label {
-    font-size: 0.9em;
-}
-
-input:focus {
-   outline: 0;
-   outline: 1px solid rgb(227, 227, 227);
-   box-shadow: 1px 1px 5px white;
-} 
-
-footer {
-    background-color: rgb(38, 38, 38);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 40px;
-    z-index: 1;
-    font-size: 13px;
-}
-
-footer svg {
-    width: 15px;
-    height: 15px;
-    fill: white;
-    padding-bottom: 2px;
+#container .boxInput input:focus {
+    border-color: rgb(0, 247, 123);
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -169,5 +109,21 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] { 
    -moz-appearance: textfield;
    appearance: textfield;
+}
 
+footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: 100vw;
+    height: 40px;
+    font-size: 13px;
+}
+
+footer svg {
+    width: 15px;
+    height: 15px;
+    fill: white;
 }

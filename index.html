@@ -1,64 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./javascript/javascript.js"></script>
-    <script src="./javascript/decimal.js"></script>
-    <script src="./javascript/binario.js"></script>
-    <script src="./javascript/octal.js"></script>
-    <script src="./javascript/hexadecimal.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Conversor</title>
 </head>
 <body>
-
-    <header>
-        
-        <h1 style="z-index: 10">Conversor</h1>
-        <label for="lateral"><div class="lateral"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-          </svg></div></label>
-        <input id="lateral" type="checkbox" style="display: none">
-
-        <div id="menu" class="menu">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/eric-lamounier/" target="_blank">Likedin</a></li>
-                <li><a href="https://www.instagram.com/eric.lamounier/" target="_blank">Instagram</a></li>
-                <li><a href="https://wa.me/5537984111291/" target="_blank">WhatsApp</a></li>
-                <li><a href="https://github.com/EricLamounier/" target="_blank">GitHub</a></li>
-            </ul>
-        </div>
-
-    </header>
-
     <main>
-
-        <div class="container">
-            <form class="formulario">
-                <div class="dec">
-                    <label for="decimal" class="wwww" >Decimal</label>
-                    <input type="number" class="form-control" id="decimal" oninput="converte_dec()" autocomplete="off">
+        <div id="container">
+            <header>
+                <div>
+                    <h2>Conversor</h2>
+                    <h3>Dec - Bin- Oct - Hex</h3>
                 </div>
-
-                <div class="bin3">
-                    <label for="binario" class="form-label">Binário</label>
-                    <input type="number" class="form-control" id="binario" oninput="converte_bin()" autocomplete="off">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces-asterisk" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"/>
+                    </svg>
                 </div>
-
-                <div class="oct">
-                    <label for="octal" class="form-label">Octal</label>
-                    <input type="number" class="form-control" id="octal" oninput="converte_oct()" autocomplete="off">
+            </header>
+            <div id="conversor">
+                <div class="boxInput">
+                    <label for="inputDecimal">Decimal</label>
+                    <input type="text" id="inputDecimal" inputmode="numeric" autocomplete="off"/>
+                    <p class="type">(10)</p>
                 </div>
-
-                <div class="hex">
-                    <label for="hexadecimal" class="form-label">Hexadecimal</label>
-                    <input type="number" class="form-control" id="hexadecimal" oninput="converte_hex()" autocomplete="off">
+    
+                <div class="boxInput">
+                    <label for="inputBinario">Binario</label>
+                    <input type="text" id="inputBinario" inputmode="numeric" autocomplete="off"/>
+                    <p class="type">(2)</p>
                 </div>
-            </form>
+    
+                <div class="boxInput">
+                    <label for="inputOctal">Octal</label>
+                    <input type="text" id="inputOctal" inputmode="numeric" autocomplete="off"/>
+                    <p class="type">(8)</p>
+                </div>
+    
+                <div class="boxInput">
+                    <label for="inputHexadecimal">Hexadecimal</label>
+                    <input type="text" id="inputHexadecimal" inputmode="numeric" autocomplete="off"/>
+                    <p class="type">(16)</p>
+                </div>
+            </div>
+
         </div>
-
     </main>
     <footer class="rodape">
         <span>Feito com 🤍 por Eric Lamounier</span>
@@ -66,5 +55,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5_logos</title><path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z"></path></svg>
         </a>
     </footer>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/conversorDecimal.js"></script>
+    <script src="javascript/conversorBinario.js"></script>
+    <script src="javascript/conversorOctal.js"></script>
+    <script src="javascript/conversorHexadecimal.js"></script>
 </body>
 </html>
