@@ -37,7 +37,7 @@ function hex_dec(value) {
             break;
 
             case 'F':
-                dec += 14 * Math.pow(16, i) 
+                dec += 15 * Math.pow(16, i) 
             break;
 
             default:
