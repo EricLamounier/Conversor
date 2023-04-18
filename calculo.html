@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculo.css">
+    <title>Calculo Binario</title>
+</head>
+<body>
+    <main>
+        <button class="button" id="backToConvert"><p>Voltar</p></button>
+        <form class="calculo">
+            <div class="boxInput">
+                <label>Numero 1</label>
+                <input id="n1" type="number" placeholder="numero 1">
+                <p class="type">(2)</p>
+            </div>
+            
+            <div class="boxInput">
+                <label>Numero 2</label>
+                <input id="n2" type="number" placeholder="numero 2">
+                <p class="type">(2)</p>
+            </div>
+            <button type="button" class="button" id="calcular" onclick="getNumbers()">Calcular</button>
+    
+        </form>
+        <div id="resultados">
+            <div class="boxInput">
+                <label>Soma n1 + n2</label>
+                <input id="soma" type="number" readonly>
+                <p class="type">(2)</p>
+            </div>
+
+            <div class="boxInput">
+                <label>Subtracao n1 - n2</label>
+                <input id="subtracao" type="number" readonly>
+                <p class="type">(2)</p>
+            </div>
+            
+            <div class="boxInput">
+                <label>Multiplicação n1 * n2</label>
+                <input id="multiplicacao" type="number" readonly>
+                <p class="type">(2)</p>
+            </div>
+            
+            <div class="boxInput">
+                <label>Divisão n1 / n2</label>
+                <input id="divisao" type="number" readonly>
+                <p class="type">(2)</p>
+            </div>
+        </div>
+        <script src="javascript/calculo.js"></script>
+    </main>
+</body>
+</html>
