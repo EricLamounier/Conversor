@@ -12,7 +12,7 @@
 }
 
 form.calculo  {
-    width: 50%;
+    width: 80%;
     min-width: 230px;
     display: flex;
     flex-direction: column;
@@ -48,3 +48,9 @@ form.calculo > button {
 #backToConvert > p::before {
     content: url('../images/arrow-left-circle.svg');
 }
+
+.calculoBoxInput {
+    width: 80%;
+    max-width: 700px;
+}
+    
