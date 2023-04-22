@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/calculo.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/calculo.css">
     <title>Calculo Binario</title>
 </head>
 <body>
     <main>
-        <a href="index.html"><button class="button" id="backToConvert" style="min-width: 100px;"><p>Voltar</p></button></a>
+        <a href="../index.html"><button class="button" id="backToConvert" style="min-width: 100px;"><p>Voltar</p></button></a>
         <form class="calculo">
             <div class="boxInput calculoBoxInput">
                 <label>Numero 1</label>
@@ -23,7 +23,7 @@
                 <input id="n2" type="number" placeholder="numero 2">
                 <p class="type">(2)</p>
             </div>
-            <button type="button" class="button" id="calcular" onclick="getNumbers()">Calcular</button>
+            <button type="button" class="button" id="calcular">Calcular</button>
     
         </form>
         <div id="resultados">
@@ -51,7 +51,7 @@
                 <p class="type">(2)</p>
             </div>
         </div>
-        <script src="javascript/calculo.js"></script>
     </main>
+    <script type="module" src="../javascript/calculo.js"></script>
 </body>
 </html>

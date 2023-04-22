@@ -106,10 +106,6 @@ main #container {
     border-color: rgb(0, 247, 123);
 }
 
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-    
-}
 input[type=number] { 
    -moz-appearance: textfield;
    appearance: textfield;
