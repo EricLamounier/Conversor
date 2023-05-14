@@ -54,3 +54,24 @@ form.calculo > button {
     max-width: 700px;
 }
     
+footer {
+    text-align: center;
+}
+
+footer > a {
+    filter: drop-shadow(0px 0px 2px #fff);
+}
+
+footer img {
+    animation: pulsa 2s linear infinite;
+}
+
+@keyframes pulsa {
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.1);
+    } 100% {
+        transform: scale(1);
+    }
+}

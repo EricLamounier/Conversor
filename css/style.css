@@ -16,8 +16,8 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -25,8 +25,6 @@ main {
 }
 
 main #container {
-    position: absolute;
-    top: 70px;
     width: 100%;
     max-width: 450px;
     height: 450px;
@@ -35,6 +33,7 @@ main #container {
     padding: 10px;
     align-items: center;
     gap: 30px;
+    margin-bottom: 100px;
 }
 
 #container header {
@@ -44,7 +43,6 @@ main #container {
     border-radius: 10px;
     display: flex;
 }
-
 
 #container header div:nth-child(1) {
     width: 50%;
@@ -126,4 +124,26 @@ input[type=number] {
 
 .button:hover {
     background-color: #1e8756;
+}
+
+footer {
+    text-align: center;
+}
+
+footer > a {
+    filter: drop-shadow(0px 0px 2px #fff);
+}
+
+footer img {
+    animation: pulsa 2s linear infinite;
+}
+
+@keyframes pulsa {
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.1);
+    } 100% {
+        transform: scale(1);
+    }
 }
