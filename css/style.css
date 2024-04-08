@@ -44,10 +44,6 @@ main #container {
     display: flex;
 }
 
-svg {
-    fill: #fff;
-}
-
 #container header div:nth-child(1) {
     width: 50%;
 }
@@ -55,7 +51,7 @@ svg {
 #container header div:nth-child(2) svg {
     height: 60px;
     width: 60px;
-    fill: rgb(14, 27, 16);
+    fill: #fff;
 }
 
 #container header div:nth-child(2) {
