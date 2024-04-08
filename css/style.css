@@ -44,6 +44,10 @@ main #container {
     display: flex;
 }
 
+svg {
+    fill: #fff;
+}
+
 #container header div:nth-child(1) {
     width: 50%;
 }
